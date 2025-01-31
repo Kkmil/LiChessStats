@@ -1,0 +1,129 @@
+$color_1: darkgray;
+$color_2: #f2f2f2;
+$color_3: cornflowerblue;
+$color_4: white;
+$color_5: gray;
+$color_6: #ffffff;
+$color_7: whitesmoke;
+$color_8: #fff;
+$background-color_1: #191927;
+$background-color_2: gray;
+$background-color_3: #171a1d;
+$background-color_4: cornflowerblue;
+
+/* SearchBarevaluate */
+/* Tabels */
+body {
+	background-color: $background-color_1;
+	min-height: 50vh;
+}
+.topnav {
+	overflow: hidden;
+	color: $color_1;
+	a {
+		float: left;
+		color: $color_2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		&:hover {
+			color: $color_3;
+		}
+	}
+	a.active {
+		color: $color_3;
+	}
+}
+.desc {
+	color: $color_4;
+}
+a {
+	text-decoration: none;
+}
+hr {
+	height: 2px;
+	border-width: 0;
+	color: $color_5;
+	background-color: $background-color_2;
+}
+.search-input {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border: 0px;
+	&:focus {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border: 0px;
+	}
+}
+.btn.btn-search {
+	height: 50px;
+	background: #ffffff;
+	color: $color_6;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	box-shadow: none !important;
+}
+iframe {
+	margin: 0 auto;
+	display: block;
+	border-style: none;
+}
+* {
+	&:focus {
+		outline: 0 !important;
+	}
+}
+.home {
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+.table {
+	color: $color_7;
+	font-size: 12px;
+	font-weight: normal;
+	border: none;
+	border-collapse: collapse;
+	max-width: 100%;
+	background-color: $background-color_3;
+}
+td {
+	text-align: left;
+	padding: 8px;
+	border-top: 1px solid white;
+	bottom: 1px solid white;
+	border-bottom: 1px solid white;
+}
+th {
+	text-align: left;
+	padding: 8px;
+	border-top: 1px solid white;
+	bottom: 1px solid white;
+	border-bottom: 1px solid white;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.sticky-footer {
+	position: sticky;
+	top: 94%;
+}
+.input-search {
+	border-radius: 15px;
+}
+.btn-evaluate {
+	color: $color_8;
+	background-color: $background-color_4;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	box-shadow: none !important;
+}
+.fs {
+	font-size: 120%;
+}

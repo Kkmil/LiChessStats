@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="icon" type="image/png" href="assets/img/listatsicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/search.js"></script>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center mt-3">
+        <div class="topnav text-center">
+            <a href="index.html">Home</a>
+            <a class="active" href="search.html">Search</a>
+            <a href="crosstable.html">Crosstable</a>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <hr>
+    </div>
+    
+    <!-- Heading -->
+    <div class="desc text-center py-4">
+        <h2>Search a Player</h2>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="col-md-6 col-lg-6 col-11 mx-auto my-atuo search-box py-4">
+        <div class="input-group form-container">
+				<input type="text" name="serach-box" class="form-control search-input" placeholder="Search a Player..." 
+                       autofocus="autofocus" autocomplete="off" id="searchbar">
+                <span class="input-group-btn">
+                    <button class="btn btn-search" onclick="search()">
+                        <img src="assets/img/searchicon.png" alt="search-logo" width="45">
+                    </button>
+                </span>
+        </div>
+    </div>    
+	<!-- Color Selection -->
+            <div class="d-flex justify-content-center mt-3">
+                <button class="btn btn-light mx-2" id="whiteColorBtn" onclick="setColor('white')">White</button>
+                <button class="btn btn-dark text-white mx-2" id="blackColorBtn" onclick="setColor('black')">Black</button>
+            </div>
+        </div>  
+
+    <!-- Content -->
+    <div class="container">
+        <table class="center mt-5 desc fs">
+            <tr>
+                <td style="border-top: none;"></td>
+                <th style="border-top: none;">Username:</th>
+                <td style="border-top: none;" id="username">no data</td>
+                <td style="border-top: none;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>Created at:</th>
+                <td id="created_at">no data</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>Playtime:</th>
+                <td id="playtime">no data</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>Last seen:</th>
+                <td id="last_seen">no data</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>Wins:</th>
+                <td id="wins">0</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>Draws:</th>
+                <td id="draws">0</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: none;"></td>
+                <th style="border-bottom: none;">Losses:</th>
+                <td style="border-bottom: none;" id="losses">0</td>
+                <td style="border-bottom: none;"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container desc text-center fs">
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>Blitz ⚡</h3>
+                <table class="center">
+                    <tr>
+                        <th style="border-bottom: none;">Games</th>
+                        <th style="border-bottom: none;">Rating</th>
+                    </tr>
+                    <tr>
+                        <td id="blitz_games" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+                        <td id="blitz_rating" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <h3>Bullet 📍</h3>
+                <table class="center">
+                    <tr>
+                        <th style="border-bottom: none;">Games</th>
+                        <th style="border-bottom: none;">Rating</th>
+                    </tr>
+                    <tr>
+                        <td id="bullet_games" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+                        <td id="bullet_rating" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>Rapid 🚀</h3>
+                <table class="center">
+                    <tr>
+                        <th style="border-bottom: none;">Games</th>
+                        <th style="border-bottom: none;">Rating</th>
+                    </tr>
+                    <tr>
+                        <td id="rapid_games" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+                        <td id="rapid_rating" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <h3>Puzzle 🧩</h3>
+                <table class="center">
+                    <tr>
+                        <th style="border-bottom: none;">Games</th>
+                        <th style="border-bottom: none;">Rating</th>
+                    </tr>
+                    <tr>
+                        <td id="puzzle_games" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+                        <td id="puzzle_rating" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+		<div class="row mt-5">
+    <div class="col-md-6">
+        <h3>Games Played as 🤍</h3>
+        <table class="center">
+            <tr>
+                <th style="border-bottom: none;">Games</th>
+            </tr>
+            <tr>
+                <td id="white_games" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h3>Games played as 🖤</h3>
+        <table class="center">
+            <tr>
+                <th style="border-bottom: none;">Games</th>
+            </tr>
+            <tr>
+                <td id="black_games" style="border-bottom: none; border-top: none;" class="text-center">0</td>
+            </tr>
+				</table>
+			</div>
+		</div>
+    </div>
+
+
+
+</body>
+</html>

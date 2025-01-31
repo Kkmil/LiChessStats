@@ -1,0 +1,130 @@
+/* SearchBarevaluate */
+/* Tabels */
+body {
+  background-color: #191927;
+  min-height: 50vh;
+}
+
+.topnav {
+  overflow: hidden;
+  color: darkgray;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  color: cornflowerblue;
+}
+.topnav a.active {
+  color: cornflowerblue;
+}
+
+.desc {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+
+.search-input {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 0px;
+}
+.search-input:focus {
+  box-shadow: none;
+  border: 0px;
+}
+
+.btn.btn-search {
+  height: 50px;
+  background: #ffffff;
+  color: #ffffff;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: none !important;
+}
+
+iframe {
+  margin: 0 auto;
+  display: block;
+  border-style: none;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+.home {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.table {
+  color: whitesmoke;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  max-width: 100%;
+  background-color: #171a1d;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  border-top: 1px solid white;
+  bottom: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  border-top: 1px solid white;
+  bottom: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sticky-footer {
+  position: sticky;
+  top: 94%;
+}
+
+.input-search {
+  border-radius: 15px;
+}
+
+.btn-evaluate {
+  color: #fff;
+  background-color: cornflowerblue;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: none !important;
+}
+
+.fs {
+  font-size: 120%;
+}/*# sourceMappingURL=style.css.map */
